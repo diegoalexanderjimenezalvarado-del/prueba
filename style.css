@@ -1,0 +1,467 @@
+
+/* ===== CONFIGURACIÓN GENERAL ===== */
+
+:root {
+    --negro: #11110f;
+    --negro-suave: #1b1a17;
+    --dorado: #d6b56d;
+    --dorado-claro: #f0dca5;
+    --crema: #f8f3e9;
+    --gris: #bdb6a8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--negro);
+    color: var(--crema);
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* ===== PORTADA ===== */
+
+.portada {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 18px;
+
+    background:
+        radial-gradient(
+            ellipse at top,
+            #3c3220 0%,
+            #1b1a16 42%,
+            #10100f 100%
+        );
+}
+
+.marco {
+    width: 100%;
+    max-width: 720px;
+    min-height: 650px;
+    padding: 65px 25px;
+
+    border: 1px solid rgba(214, 181, 109, 0.65);
+    outline: 1px solid rgba(214, 181, 109, 0.15);
+    outline-offset: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    position: relative;
+}
+
+.marco::before,
+.marco::after {
+    content: "✦";
+    position: absolute;
+    color: var(--dorado);
+    font-size: 23px;
+}
+
+.marco::before {
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--negro-suave);
+    padding: 0 12px;
+}
+
+.marco::after {
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--negro-suave);
+    padding: 0 12px;
+}
+
+.sobrelinea,
+.etiqueta {
+    color: var(--dorado);
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.birrete {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: var(--dorado);
+}
+
+.invitacion {
+    color: var(--gris);
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+h1,
+h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: clamp(3.8rem, 10vw, 6.8rem);
+    line-height: 0.9;
+    margin-bottom: 28px;
+}
+
+h1 span {
+    color: var(--dorado-claro);
+    font-style: italic;
+}
+
+.linea-dorada {
+    width: 100px;
+    height: 1px;
+    background: var(--dorado);
+    margin: 10px auto 24px;
+}
+
+.nombre {
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+.promocion {
+    color: var(--dorado);
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    margin-top: 10px;
+}
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    padding: 14px 24px;
+    border: 1px solid var(--dorado);
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.boton-dorado {
+    color: var(--negro);
+    background: var(--dorado);
+}
+
+.boton-dorado:hover {
+    background: var(--dorado-claro);
+    transform: translateY(-3px);
+}
+
+.marco .boton {
+    margin-top: 38px;
+    font-size: 0.8rem;
+}
+
+.pie-portada {
+    margin-top: 50px;
+    font-size: 0.6rem;
+    color: var(--gris);
+    letter-spacing: 3px;
+}
+
+
+/* ===== SECCIONES ===== */
+
+.seccion {
+    padding: 100px 22px;
+    text-align: center;
+}
+
+.mensaje {
+    background: var(--crema);
+    color: var(--negro);
+}
+
+.mensaje .etiqueta,
+.evento .etiqueta,
+.confirmacion .etiqueta {
+    margin-bottom: 15px;
+}
+
+.mensaje h2,
+.evento h2,
+.confirmacion h2 {
+    font-size: clamp(2.8rem, 7vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.mensaje .etiqueta {
+    color: #89703e;
+}
+
+.adorno {
+    color: #a88948;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.texto-mensaje {
+    max-width: 600px;
+    margin: 0 auto 18px;
+    font-size: 0.9rem;
+}
+
+.firma {
+    margin-top: 30px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #8b713f;
+}
+
+
+/* ===== DETALLES DEL EVENTO ===== */
+
+.evento {
+    background: var(--negro-suave);
+}
+
+.tarjetas {
+    width: 100%;
+    max-width: 1000px;
+    margin: 45px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    border: 1px solid rgba(214, 181, 109, 0.35);
+    padding: 35px 18px;
+    min-width: 0;
+}
+
+.icono {
+    display: block;
+    color: var(--dorado);
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.tarjeta h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.7rem;
+    color: var(--dorado-claro);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.tarjeta p {
+    font-size: 0.85rem;
+}
+
+.dato-secundario {
+    display: block;
+    color: var(--gris);
+    font-size: 0.75rem;
+    margin-top: 5px;
+}
+
+.enlace-mapa {
+    display: inline-block;
+    margin-top: 18px;
+    color: var(--dorado);
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--dorado);
+}
+
+
+/* ===== FORMULARIO ===== */
+
+.confirmacion {
+    background:
+        radial-gradient(
+            ellipse at center,
+            #29251c,
+            #11110f 75%
+        );
+}
+
+.confirmacion .texto-mensaje {
+    color: var(--gris);
+}
+
+.formulario {
+    width: 100%;
+    max-width: 450px;
+    margin: 35px auto 0;
+    text-align: left;
+}
+
+.formulario label {
+    display: block;
+    margin: 20px 0 8px;
+    color: var(--dorado-claro);
+    font-size: 0.85rem;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #65573c;
+    background: #1b1a17;
+    color: var(--crema);
+    border-radius: 0;
+    outline: none;
+}
+
+.formulario input:focus {
+    border-color: var(--dorado);
+}
+
+.formulario input::placeholder {
+    color: #888176;
+}
+
+.boton-enviar {
+    width: 100%;
+    margin-top: 28px;
+}
+
+.aviso {
+    text-align: center;
+    margin-top: 15px;
+    color: var(--gris);
+    font-size: 0.7rem;
+}
+
+
+/* ===== PIE DE PÁGINA ===== */
+
+.pie {
+    text-align: center;
+    padding: 55px 20px;
+    background: #0c0c0b;
+}
+
+.frase-final {
+    max-width: 450px;
+    margin: 0 auto 25px;
+    color: var(--gris);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+.nombre-footer {
+    color: var(--dorado);
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+}
+
+.derechos {
+    margin-top: 10px;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: var(--gris);
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 25px;
+    color: var(--dorado);
+    font-size: 0.8rem;
+}
+
+
+/* ===== ADAPTACIÓN A CELULARES ===== */
+
+@media (max-width: 650px) {
+
+    .marco {
+        min-height: 590px;
+        padding: 45px 18px;
+    }
+
+    .sobrelinea {
+        font-size: 0.58rem;
+        letter-spacing: 2px;
+    }
+
+    .invitacion {
+        font-size: 0.75rem;
+    }
+
+    .nombre {
+        font-size: 0.72rem;
+        letter-spacing: 2px;
+    }
+
+    .promocion {
+        letter-spacing: 3px;
+    }
+
+    .pie-portada {
+        font-size: 0.52rem;
+        letter-spacing: 2px;
+    }
+
+    .seccion {
+        padding: 75px 20px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 15px;
+    }
+
+    .tarjeta {
+        padding: 28px 18px;
+    }
+
+    .texto-mensaje {
+        font-size: 0.85rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}

@@ -1,0 +1,191 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Graduación | Una noche especial</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- PORTADA PRINCIPAL -->
+    <header class="portada" id="inicio">
+
+        <div class="marco">
+            <p class="sobrelinea">UN LOGRO, UN SUEÑO, UN NUEVO COMIENZO</p>
+
+            <div class="birrete">✦</div>
+
+            <p class="invitacion">Con mucha alegría te invito a celebrar</p>
+
+            <h1>
+                Mi<br>
+                <span>Graduación</span>
+            </h1>
+
+            <div class="linea-dorada"></div>
+
+            <p class="nombre">NOMBRE DEL GRADUADO</p>
+
+            <p class="promocion">PROMOCIÓN 2026</p>
+
+            <a href="#detalles" class="boton boton-dorado">
+                Descubrir invitación
+                <span>↓</span>
+            </a>
+
+            <p class="pie-portada">UN CAPÍTULO TERMINA, OTRO COMIENZA</p>
+        </div>
+
+    </header>
+
+
+    <!-- MENSAJE DE INVITACIÓN -->
+    <main>
+
+        <section class="mensaje seccion" id="detalles">
+
+            <p class="etiqueta">UN DÍA PARA RECORDAR</p>
+
+            <h2>¡Lo logré!</h2>
+
+            <div class="adorno">✦</div>
+
+            <p class="texto-mensaje">
+                Después de mucho esfuerzo, dedicación y sueños por cumplir,
+                ha llegado el momento de celebrar uno de los logros más
+                importantes de mi vida.
+            </p>
+
+            <p class="texto-mensaje">
+                Me encantaría compartir contigo esta ocasión tan especial
+                y celebrar juntos el comienzo de una nueva etapa.
+            </p>
+
+            <p class="firma">Espero contar contigo.</p>
+
+        </section>
+
+
+        <!-- DATOS DEL EVENTO -->
+        <section class="evento seccion">
+
+            <p class="etiqueta">RESERVA LA FECHA</p>
+
+            <h2>Detalles del evento</h2>
+
+            <div class="tarjetas">
+
+                <article class="tarjeta">
+                    <span class="icono">✧</span>
+                    <h3>Fecha</h3>
+                    <p>Sábado, 14 de noviembre</p>
+                    <span class="dato-secundario">2026</span>
+                </article>
+
+                <article class="tarjeta">
+                    <span class="icono">◷</span>
+                    <h3>Hora</h3>
+                    <p>5:00 de la tarde</p>
+                    <span class="dato-secundario">Hora de inicio</span>
+                </article>
+
+                <article class="tarjeta">
+                    <span class="icono">⌖</span>
+                    <h3>Ubicación</h3>
+                    <p>Nombre del salón</p>
+                    <span class="dato-secundario">Ciudad, Guatemala</span>
+
+                    <a class="enlace-mapa"
+                       href="https://www.google.com/maps"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Ver mapa ↗
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONFIRMACIÓN DE ASISTENCIA -->
+        <section class="confirmacion seccion" id="confirmar">
+
+            <p class="etiqueta">TU PRESENCIA ES IMPORTANTE</p>
+
+            <h2>¿Me acompañas?</h2>
+
+            <p class="texto-mensaje">
+                Será una alegría compartir este momento contigo.
+                Por favor, confirma tu asistencia.
+            </p>
+
+            <!-- Formulario visual: después conectaremos su funcionamiento -->
+            <form class="formulario">
+
+                <label for="nombre">Nombre completo</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Escribe tu nombre"
+                    required
+                >
+
+                <label for="personas">Cantidad de asistentes</label>
+                <input
+                    type="number"
+                    id="personas"
+                    name="personas"
+                    min="1"
+                    max="10"
+                    value="1"
+                    required
+                >
+
+                <button type="button" class="boton boton-dorado boton-enviar">
+                    Confirmar asistencia
+                </button>
+
+                <p class="aviso">
+                    Tu confirmación se habilitará próximamente.
+                </p>
+
+            </form>
+
+        </section>
+
+
+        <!-- DESPEDIDA -->
+        <footer class="pie">
+
+            <div class="linea-dorada"></div>
+
+            <p class="frase-final">
+                “El futuro pertenece a quienes creen en la belleza
+                de sus sueños.”
+            </p>
+
+            <p class="nombre-footer">NOMBRE DEL GRADUADO</p>
+
+            <p class="derechos">GRADUACIÓN · 2026</p>
+
+            <a href="#inicio" class="volver">Volver al inicio ↑</a>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>
